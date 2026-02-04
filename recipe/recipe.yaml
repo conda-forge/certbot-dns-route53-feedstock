@@ -1,6 +1,6 @@
 context:
   name: certbot-dns-route53
-  version: "5.2.2"
+  version: "5.3.0"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: a168050de3ef62b453bae7533b8ab25973a9506bbeb8a34aa50f522c82728530
+  sha256: ca8de3b071b0a0a95a81696098104b29b1916e8b8b5202951c5ad9686fdfa42f
 
 build:
   noarch: python
