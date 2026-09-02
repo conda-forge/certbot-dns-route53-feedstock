@@ -1,14 +1,13 @@
 context:
-  name: certbot-dns-route53
-  version: "5.7.0"
+  version: "5.8.0"
 
 package:
-  name: ${{ name|lower }}
+  name: certbot-dns-route53
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: dcc623dd9c80be6b05e91ced370ec41188d4f10b2ee6617dfad57ec7df46ed3d
+  url: https://pypi.org/packages/source/c/certbot-dns-route53/certbot_dns_route53-${{ version }}.tar.gz
+  sha256: de2d294074f7a0c084c708fdc6217474e8196917b0c4f98929fa9de78076e9b6
 
 build:
   noarch: python
@@ -31,7 +30,9 @@ tests:
       imports:
         - certbot_dns_route53
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://certbot.eff.org

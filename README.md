@@ -44,31 +44,73 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `certbot-dns-route53` can be installed with `conda`:
+How to use
+----------
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda install certbot-dns-route53
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba install certbot-dns-route53
 ```
 
-It is possible to list all of the versions of `certbot-dns-route53` available on your platform with `conda`:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+# for adding to your local project
+pixi add certbot-dns-route53
+# for installing globally
+pixi global install certbot-dns-route53
+```
+
+</details>
+
+Search package versions
+-----------------------
+
+It is possible to list all of the versions of `certbot-dns-route53` available on your platform:
+
+<details>
+<summary>With conda</summary>
 
 ```
 conda search certbot-dns-route53 --channel conda-forge
 ```
 
-or with `mamba`:
+</details>
+
+<details>
+<summary>With mamba</summary>
 
 ```
 mamba search certbot-dns-route53 --channel conda-forge
 ```
 
-Alternatively, `mamba repoquery` may provide more information:
+</details>
+
+<details>
+<summary>With pixi</summary>
+
+```
+pixi search certbot-dns-route53 --channel conda-forge
+```
+
+</details>
+
+<details>
+<summary>With mamba repoquery, which may provide more information</summary>
 
 ```
 # Search all versions available on your platform:
@@ -80,6 +122,8 @@ mamba repoquery whoneeds certbot-dns-route53 --channel conda-forge
 # List dependencies of `certbot-dns-route53`:
 mamba repoquery depends certbot-dns-route53 --channel conda-forge
 ```
+
+</details>
 
 
 About conda-forge
